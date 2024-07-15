@@ -71,7 +71,7 @@ flowchart LR
 
 ### Advanced Topics in TTS
 
-（1）为了改进自然度（naturalness）和表现力（expressiveness），我们引入如何建模、控制和传递风格/韵律（style/prosody）以生成有表现力的（expressive）语音。）（Chap. 8）
+（1）为了改进自然度（naturalness）和表现力（expressiveness），我们引入如何建模、控制和传递风格/韵律（style/prosody）以生成有表现力的（expressive）语音。（Chap. 8）
 
 （2）由于 TTS 模型面临顽健性（robustness）的问题——生成语音中的跳词、重复问题会影响语音质量，我们引入改善语音合成的顽健性的方法。（Chap. 9）
 
@@ -102,10 +102,10 @@ graph LR
 
     NetworkStructure(Network<br>Structure) --> CNN
     NetworkStructure --> RNN
-    NetworkStructure --> Self_Att
+    NetworkStructure --> Self-Attention
     NetworkStructure --> Hybrid
 
-    AR --> WaveNetAR["WaveNet,<br>SampleRNN,<br>WaveRNN,<br>DeepVoice,<br>Tacotron 1/2,<br>TransformerTTS"]
+    AR --> WaveNetAR["WaveNet,<br>SampleRNN,<br>WaveRNN,<br>DeepVoice 1/2/3,<br>Tacotron 1/2,<br>TransformerTTS"]
     NAR --> WaveNetNAR["Parallel WaveNet,<br>WaveGlow,<br>FloWaveNet,<br>MelGAN,<br>FastSpeech 1/2/2s,<br>EATS,<br>VITS,<br>NaturalSpeech,<br>HiFi-GAN"]
 
     Seq2Seq --> WaveNetSeq2Seq["WaveNet,<br>DeepVoice 1/2/3,<br>Tacotron 1/2,<br>WaveRNN,<br>FastSpeech 1/2"]
@@ -116,7 +116,7 @@ graph LR
 
     CNN --> WaveNetCNN["WaveNet,<br>Parallel WaveNet,<br>DeepVoice,<br>ClariNet,<br>ParaNet,<br>MelGAN,<br>EATS,<br>DCTTS,<br>WaveGlow,<br>FloWaveNet"]
     RNN --> WaveNetRNN["SampleRNN,<br>Tacotron 2,<br>WaveRNN,<br>LPCNet,<br>DurIAN"]
-    Self-Attention --> WaveNetSelfAtt["TransformerTTS,<br>FastSpeech,<br>AlignTTS,<br>FastPitch,<br>JDI-T"]
+    Self-Attention --> WaveNetSelfAtt["TransformerTTS,<br>FastSpeech 1/2/2s,<br>AlignTTS,<br>FastPitch,<br>JDI-T"]
     Hybrid --> WaveNetHybrid["DeepVoice 1/2,<br>Tacotron,<br>LightSpeech,<br>DurIAN,<br>Wave-Tacotron,<br>NaturalSpeech"]
 ```
 
